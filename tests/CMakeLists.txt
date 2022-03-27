@@ -29,3 +29,5 @@ target_link_libraries(${TEST_APP_NAME} ${APP_LIB_NAME} ${CPPUTEST_LDFLAGS})
 
 # (5) Run the test once the build is done
 add_custom_command(TARGET ${TEST_APP_NAME} COMMAND ./${TEST_APP_NAME} POST_BUILD)
+
+add_test(${TEST_APP_NAME} ${TEST_APP_NAME})

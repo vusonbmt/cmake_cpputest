@@ -2,6 +2,8 @@
 cmake_minimum_required(VERSION 3.7)
 project(cmakeCppUTestDemo)
 
+enable_testing()
+
 add_compile_options(-std=c++11 -Wall -Werror)
 
 set(APP_NAME fooApp)

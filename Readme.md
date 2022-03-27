@@ -34,6 +34,36 @@ Result:
 .
 OK (1 tests, 1 ran, 1 checks, 0 ignored, 0 filtered out, 0 ms)
 ```
+# Run with Ctest
+```
+ctest -V
+```
+Result:
+```
+vuson@sckt:~/cmake_cpputest/build$ ctest -V
+UpdateCTestConfiguration  from :/home/vuson/cmake_cpputest/build/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/home/vuson/cmake_cpputest/build/DartConfiguration.tcl
+Test project /home/vuson/cmake_cpputest/build
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: fooApp_tests
+
+1: Test command: /home/vuson/cmake_cpputest/build/tests/fooApp_tests
+1: Test timeout computed to be: 10000000
+1: .
+1: OK (1 tests, 1 ran, 1 checks, 0 ignored, 0 filtered out, 0 ms)
+1: 
+1/1 Test #1: fooApp_tests .....................   Passed    0.01 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.02 sec
+```
 
 # Tutorial ref
 https://r4nd0m6uy.ch/cmake-and-cpputest.html
