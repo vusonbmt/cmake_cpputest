@@ -2,6 +2,7 @@
 cmake_minimum_required(VERSION 3.7)
 project(cmakeCppUTestDemo)
 
+# Enable make test
 enable_testing()
 
 add_compile_options(-std=c++11 -Wall -Werror)

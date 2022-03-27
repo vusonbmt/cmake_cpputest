@@ -37,6 +37,7 @@ OK (1 tests, 1 ran, 1 checks, 0 ignored, 0 filtered out, 0 ms)
 # Run with Ctest
 ```
 ctest -V
+make test
 ```
 Result:
 ```
