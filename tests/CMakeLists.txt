@@ -11,7 +11,7 @@ else()
 endif()
 
 # (2) Our unit tests sources
-set(TEST_APP_NAME ${APP_NAME}_tests)
+set(TEST_PROJECT ${PROJECT}_tests)
 set(TEST_SOURCES
 #    mocks/IFooMock.cpp
 #    FooTest.cpp
@@ -24,10 +24,12 @@ include_directories(${CPPUTEST_INCLUDE_DIRS} ../src/)
 link_directories(${CPPUTEST_LIBRARIES})
 
 # (4) Build the unit tests objects and link then with the app library
-add_executable(${TEST_APP_NAME} ${TEST_SOURCES})
-target_link_libraries(${TEST_APP_NAME} ${APP_LIB_NAME} ${CPPUTEST_LDFLAGS})
+add_executable(${TEST_PROJECT} ${TEST_SOURCES})
+target_link_libraries(${TEST_PROJECT} ${APP_LIB_NAME} ${CPPUTEST_LDFLAGS})
 
 # (5) Run the test once the build is done
-add_custom_command(TARGET ${TEST_APP_NAME} COMMAND ./${TEST_APP_NAME} POST_BUILD)
+add_custom_command(TARGET ${TEST_PROJECT} COMMAND ./${TEST_PROJECT} POST_BUILD)
 
-add_test(${TEST_APP_NAME} ${TEST_APP_NAME})
+# Testing
+add_test(${TEST_PROJECT} ${TEST_PROJECT})
+set_tests_properties(${TEST_PROJECT} PROPERTIES PASS_REGULAR_EXPRESSION "0;5;10")

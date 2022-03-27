@@ -7,7 +7,7 @@ enable_testing()
 
 add_compile_options(-std=c++11 -Wall -Werror)
 
-set(APP_NAME fooApp)
+set(PROJECT fooApp)
 set(APP_LIB_NAME fooAppLib)
 
 # (2) Include application build instructions
